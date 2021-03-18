@@ -55,6 +55,7 @@ CASKS=(
 
 echo "Installing cask apps..."
 brew install --cask ${CASKS[@]}
+brew tap homebrew/cask-fonts
 
 
 echo "Installing VS Code extensions..."
@@ -86,7 +87,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 # iTerm2 preferences
-cp ~/dotfiles/com.googlecode.iterm2.plist ~/Library/Preferences
+cp ~/dotfiles/config/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences
 
 echo "Setting OS defaults..."
 bash macOS/defaults.sh
