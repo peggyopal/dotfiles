@@ -1,0 +1,2 @@
+alias sshMario="ssh -L 2222:mario.usask.ca:22 poa681@skorpio.usask.ca"
+alias mountSchool="sshfs -p 2222 poa681@localhost:thesis/ ~/school"
