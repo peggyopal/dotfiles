@@ -5,9 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Aliases
-alias ls='lsd'
-
 # Path to oh-my-zsh installation
 export ZSH="/Users/peggy/.oh-my-zsh"
 
@@ -142,7 +139,6 @@ plugins=(
 	tmux 
 	zsh-autosuggestions
 	zsh-completions
-	zsh-history-substring-search
 	zsh-syntax-highlighting
 )
 
