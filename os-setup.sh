@@ -2,6 +2,16 @@
 
 echo "Starting Setup"
 
+echo "Installing Terminal Stuff..."
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# powerlevel10k theme
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
+# iTerm2 preferences
+cp ~/dotfiles/config/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences
+
 echo "Symlink dotfiles..."
 ln -nfsv ~/dotfiles/config/.aliases ~/.aliases
 ln -nfsv ~/dotfiles/config/.p10k.sh ~/.p10k.sh
@@ -54,8 +64,8 @@ CASKS=(
 )
 
 echo "Installing cask apps..."
-brew install --cask ${CASKS[@]}
 brew tap homebrew/cask-fonts
+brew install --cask ${CASKS[@]}
 
 
 echo "Installing VS Code extensions..."
@@ -78,16 +88,6 @@ VS_EXTS=(
 )
 
 code --install-extension ${VS_EXTS[@]}
-
-echo "Installing Terminal Stuff..."
-# oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# powerlevel10k theme
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-
-# iTerm2 preferences
-cp ~/dotfiles/config/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences
 
 echo "Setting OS defaults..."
 bash macOS/defaults.sh
