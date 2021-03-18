@@ -89,9 +89,9 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 cp ~/dotfiles/com.googlecode.iterm2.plist ~/Library/Preferences
 
 echo "Setting OS defaults..."
-bash defaults.sh
+bash macOS/defaults.sh
 
 echo "Updating dock..."
-bash dock.sh
+bash macOS/dock.sh
 
 echo "Startup complete!"
