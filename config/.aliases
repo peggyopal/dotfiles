@@ -16,3 +16,5 @@ alias mkdir="mkdir -pv"
 
 alias ga="git add"
 alias gc="git commit"
+
+alias pip="pip3"

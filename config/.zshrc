@@ -150,3 +150,19 @@ source $ZSH_CUSTOM/.aliases
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
+export PATH="/opt/homebrew/opt/tcl-tk/bin:$PATH"
+export XML_CATALOG_FILES="/opt/homebrew/etc/xml/catalog"
+export PATH="/opt/homebrew/opt/gnu-getopt/bin:$PATH"
+eval $(thefuck --alias)
+export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if type brew &>/dev/null; then
+	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+	autoload -Uz compinit
+	compinit
+fi
+rm -f ~/.zcompdump; compinit
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
