@@ -54,7 +54,7 @@ CASKS=(
 )
 
 echo "Installing cask apps..."
-brew cask install ${CASKS[@]}
+brew install --cask ${CASKS[@]}
 
 
 echo "Installing VS Code extensions..."
