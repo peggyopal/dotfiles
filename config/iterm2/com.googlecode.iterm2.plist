@@ -813,7 +813,7 @@
 			<key>Non-ASCII Ligatures</key>
 			<false/>
 			<key>Normal Font</key>
-			<string>SourceCodePro+Powerline+AwesomeRegular 13</string>
+			<string>MesloLGS-NF-Regular 13</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
