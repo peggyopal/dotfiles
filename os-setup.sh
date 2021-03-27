@@ -6,12 +6,6 @@ echo "Installing Terminal Stuff..."
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# powerlevel10k theme
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-
-# iTerm2 preferences
-cp ~/dotfiles/config/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences
-
 echo "Symlink dotfiles..."
 ln -nfsv ~/dotfiles/config/.aliases ~/.aliases
 ln -nfsv ~/dotfiles/config/.p10k.sh ~/.p10k.sh
@@ -33,9 +27,6 @@ PACKAGES=(
     thefuck
     tmux
     zsh
-    zsh-autosuggestions
-    zsh-completions
-    zsh-syntax-highlighting
 )
 
 echo "Installing homebrew packages..."
@@ -51,7 +42,6 @@ CASKS=(
     font-hack-nerd-font
     font-source-code-pro
     lastpass
-    macfuse
     manictime
     mendeley
     microsoft-teams
@@ -94,5 +84,16 @@ bash macOS/defaults.sh
 
 echo "Updating dock..."
 bash macOS/dock.sh
+
+# powerlevel10k theme
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
+# iTerm2 preferences
+cp ~/dotfiles/config/iterm2/com.googlecode.iterm2.plist ~/Library/Preferences
+
+# zsh-plugins
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+
 
 echo "Startup complete!"
